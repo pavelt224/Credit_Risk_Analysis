@@ -39,3 +39,48 @@ Due to the difficulties of screening for fewer high-risk applicants, it is benef
 * Best Overall Balanced Accuracy Score: Easy Ensemble Classifer (93%)
 * Best Overall Precision: Easy Ensemble Classifer (9%)
 * Best Overall Recall: Easy Ensemble Classifer (92%)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* Technical Analysis
+
+## RandomOverSampler
+
+![RandomOverSampler_confusion_matrix](https://user-images.githubusercontent.com/93852380/159392148-a63494d9-feab-409a-a081-282d98c49f42.png)
+
+
+![RamdomOverSampler](https://user-images.githubusercontent.com/93852380/159392160-87e92489-28b5-4de8-b23b-a71909b062ae.png)
+
+
+## SmoteConfusion
+
+![Smote_confusion_matrix](https://user-images.githubusercontent.com/93852380/159392457-d4f0881b-113c-4dbc-83d6-3b917cffa062.png)
+
+
+![Smote_confusion](https://user-images.githubusercontent.com/93852380/159392495-4c72d90b-9f0d-45cb-89e1-6104d04e5188.png)
+
+## ClusterCentroids
+
+![ClusterCentroids_confusion_matrix](https://user-images.githubusercontent.com/93852380/159392727-05cded3a-b870-4875-8865-1f2a42d0fb1c.png)
+
+
+![ClusterCentroids](https://user-images.githubusercontent.com/93852380/159392753-f43973c0-705c-4fae-8507-e4a849eb0f39.png)
+
+
+## BalancedRandomForestClassifier
+
+![BalancedRandomForestClassifier_confusion_matrix](https://user-images.githubusercontent.com/93852380/159393004-80379a9f-bc76-4ee1-afaa-f4f2b72d437f.png)
+
+
+![BalancedRandomForestClassifier](https://user-images.githubusercontent.com/93852380/159393017-90d27928-de80-4e04-bacc-8f0862664dad.png)
+
+
+# Summary
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Given the features used to classify each group of potential loanees, both Ensemble Classifiers and Resampling techniques outperformed the Resampling techniques in accurately predicting high-risk credit card applicants and low-risk applicants, as shown by the summary dataframes and individual model testing. In the case of screening for high-risk individuals, high sensitivity exceeds model precision—it is preferable to limit false negatives and allow those high-risk individuals slide through the cracks undetected in order to safeguard the loaning businesses' interests.
+
+Recommendation Performance based on Model (6) All six models, however, had extremely poor precision scores. In other words, machine learning could only guarantee that those who were designated as high-risk were indeed high-risk 9 percent of the time. With a 91 percent chance of a False Positive result, in which a low-risk applicant is mistaken for a high-risk applicant, I cannot recommend any of the models tested in this project for implementation—regardless of high sensitivity, financial institutions risk losing 91 percent of future customers and revenues of low-risk applicants when they are denied a credit card. Many of these False Positives will file a claim and settle the refused application, but many will take their company elsewhere rather than deal with the hassle of fighting the creditor's decision.
+
+
+
